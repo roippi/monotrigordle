@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "monotrigordle",
+    "description": "32 words, too hard.  31 words, just right.",
+    "version": "1.1",
+    "icons": {
+        "48": "128.png",
+        "128": "128.png"
+    },
+    "action": {
+        "default_title": "Monotrigordle!",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://duotrigordle.com/"
+            ],
+            "css": [],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ]
+}
